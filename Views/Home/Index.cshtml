@@ -1,0 +1,29 @@
+﻿@model PdfSplitter.Models.UploadFile
+@{
+
+    ViewData["Title"] = "Home Page";
+    
+}
+
+
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+
+
+        @Html.TextBoxFor(m => m._File, new { type = "file" })
+
+        <button type="submit">Submit</button>
+        <div>
+            @Html.ValidationMessageFor(model => model._File, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+}
+
+
+

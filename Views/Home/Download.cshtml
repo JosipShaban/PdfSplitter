@@ -1,0 +1,15 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Download";
+}
+
+<h1>Download</h1>
+
+<h2>Your download is ready</h2>
+
+<div>
+    @Html.ActionLink("Download Here", "Link", new { fileName = Model })
+</div>
+<div>
+    @Html.ActionLink("Return to Home Page", "Index")
+</div>
